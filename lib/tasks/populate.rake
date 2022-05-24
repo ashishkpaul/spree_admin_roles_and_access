@@ -150,22 +150,22 @@ namespace :spree_roles do
         make_grouped_permission_set(
           build_permission_group(
             [
-              [:admin], Spree::Store,
-              [:admin, :manage], Spree::TaxCategory,
-              [:admin, :manage], Spree::TaxRate,
-              [:admin, :manage], Spree::Zone,
-              [:admin, :manage], Spree::Country,
-              [:admin, :manage], Spree::State,
-              [:admin, :manage], Spree::PaymentMethod,
-              [:admin, :manage], Spree::Taxonomy,
-              [:admin, :manage], Spree::ShippingMethod,
-              [:admin, :manage], Spree::ShippingCategory,
-              [:admin, :manage], Spree::StockLocation,
-              [:admin, :manage], Spree::StockTransfer,
-              [:admin, :manage], Spree::StockMovement,
-              [:admin, :manage], Spree::RefundReason,
-              [:admin, :manage], Spree::ReturnAuthorizationReason,
-              [:admin, :manage], Spree::ReimbursementType
+              [:admin], ::Spree::Store,
+              [:admin, :manage], ::Spree::TaxCategory,
+              [:admin, :manage], ::Spree::TaxRate,
+              [:admin, :manage], ::Spree::Zone,
+              [:admin, :manage], ::Spree::Country,
+              [:admin, :manage], ::Spree::State,
+              [:admin, :manage], ::Spree::PaymentMethod,
+              [:admin, :manage], ::Spree::Taxonomy,
+              [:admin, :manage], ::Spree::ShippingMethod,
+              [:admin, :manage], ::Spree::ShippingCategory,
+              [:admin, :manage], ::Spree::StockLocation,
+              [:admin, :manage], ::Spree::StockTransfer,
+              [:admin, :manage], ::Spree::StockMovement,
+              [:admin, :manage], ::Spree::RefundReason,
+              [:admin, :manage], ::Spree::ReturnAuthorizationReason,
+              [:admin, :manage], ::Spree::ReimbursementType
             ]
           ),
           "Configuration Management",
@@ -183,16 +183,16 @@ namespace :spree_roles do
         make_grouped_permission_set(
           build_permission_group(
             [
-              [:read, :admin, :edit, :cart], Spree::Order,
-              [:read, :admin], Spree::Payment,
-              [:read, :admin], Spree::Shipment,
-              [:read, :admin], Spree::Adjustment,
-              [:read, :admin], Spree::LineItem,
-              [:read, :admin], Spree::ReturnAuthorization,
-              [:read, :admin], Spree::CustomerReturn,
-              [:read, :admin], Spree::Reimbursement,
-              [:read, :admin], Spree::ReturnItem,
-              [:read, :admin], Spree::Refund
+              [:read, :admin, :edit, :cart], ::Spree::Order,
+              [:read, :admin], ::Spree::Payment,
+              [:read, :admin], ::Spree::Shipment,
+              [:read, :admin], ::Spree::Adjustment,
+              [:read, :admin], ::Spree::LineItem,
+              [:read, :admin], ::Spree::ReturnAuthorization,
+              [:read, :admin], ::Spree::CustomerReturn,
+              [:read, :admin], ::Spree::Reimbursement,
+              [:read, :admin], ::Spree::ReturnItem,
+              [:read, :admin], ::Spree::Refund
             ]
           ),
           "Order Display",
@@ -212,22 +212,22 @@ namespace :spree_roles do
       order_mgmt = make_grouped_permission_set(
         build_permission_group(
           [
-            [:admin, :read], Spree::Product,
-            [:admin, :read], Spree::Variant,
-            [:admin, :read], Spree::ReimbursementType,
-            [:admin, :read, :edit, :new], Spree::User,
-            [:admin, :manage], Spree::Order,
-            [:admin, :manage], Spree::Payment,
-            [:admin, :manage], Spree::Shipment,
-            [:admin, :manage], Spree::Adjustment,
-            [:admin, :manage], Spree::LineItem,
-            [:admin, :manage], Spree::ReturnAuthorization,
-            [:admin, :manage], Spree::CustomerReturn,
-            [:admin, :manage], Spree::Reimbursement,
-            [:admin, :manage], Spree::ReturnItem,
-            [:admin, :manage], Spree::Refund,
-            [:admin, :manage], Spree::StateChange,
-            [:admin, :manage], Spree::LogEntry
+            [:admin, :read], ::Spree::Product,
+            [:admin, :read], ::Spree::Variant,
+            [:admin, :read], ::Spree::ReimbursementType,
+            [:admin, :read, :edit, :new], ::Spree::User,
+            [:admin, :manage], ::Spree::Order,
+            [:admin, :manage], ::Spree::Payment,
+            [:admin, :manage], ::Spree::Shipment,
+            [:admin, :manage], ::Spree::Adjustment,
+            [:admin, :manage], ::Spree::LineItem,
+            [:admin, :manage], ::Spree::ReturnAuthorization,
+            [:admin, :manage], ::Spree::CustomerReturn,
+            [:admin, :manage], ::Spree::Reimbursement,
+            [:admin, :manage], ::Spree::ReturnItem,
+            [:admin, :manage], ::Spree::Refund,
+            [:admin, :manage], ::Spree::StateChange,
+            [:admin, :manage], ::Spree::LogEntry
           ]
         ),
         "Order Management",
@@ -239,16 +239,16 @@ namespace :spree_roles do
       make_grouped_permission_set(
         build_permission_group(
           [
-            [:read, :admin, :edit], Spree::Product,
-            [:read, :admin], Spree::Image,
-            [:read, :admin], Spree::Variant,
-            [:read, :admin], Spree::OptionValue,
-            [:read, :admin], Spree::ProductProperty,
-            [:read, :admin], Spree::OptionType,
-            [:read, :admin], Spree::Property,
-            [:read, :admin], Spree::Taxonomy,
-            [:read, :admin], Spree::Taxon,
-            [:admin, :read], Spree::Classification
+            [:read, :admin, :edit], ::Spree::Product,
+            [:read, :admin], ::Spree::Image,
+            [:read, :admin], ::Spree::Variant,
+            [:read, :admin], ::Spree::OptionValue,
+            [:read, :admin], ::Spree::ProductProperty,
+            [:read, :admin], ::Spree::OptionType,
+            [:read, :admin], ::Spree::Property,
+            [:read, :admin], ::Spree::Taxonomy,
+            [:read, :admin], ::Spree::Taxon,
+            [:admin, :read], ::Spree::Classification
           ]
         ),
         "Product Display",
@@ -259,18 +259,18 @@ namespace :spree_roles do
       make_grouped_permission_set(
         build_permission_group(
           [
-            [:admin, :manage], Spree::Product,
-            [:admin, :manage], Spree::ProductOptionType,
-            [:manage, :admin], Spree::Image,
-            [:manage, :admin], Spree::Variant,
-            [:manage, :admin], Spree::OptionValue,
-            [:admin, :manage], Spree::ProductProperty,
-            [:admin, :manage], Spree::OptionType,
-            [:admin, :manage], Spree::Property,
-            [:admin, :manage], Spree::Taxonomy,
-            [:admin, :manage], Spree::Taxon,
-            [:admin, :manage], Spree::Classification,
-            [:admin, :manage], Spree::Prototype
+            [:admin, :manage], ::Spree::Product,
+            [:admin, :manage], ::Spree::ProductOptionType,
+            [:manage, :admin], ::Spree::Image,
+            [:manage, :admin], ::Spree::Variant,
+            [:manage, :admin], ::Spree::OptionValue,
+            [:admin, :manage], ::Spree::ProductProperty,
+            [:admin, :manage], ::Spree::OptionType,
+            [:admin, :manage], ::Spree::Property,
+            [:admin, :manage], ::Spree::Taxonomy,
+            [:admin, :manage], ::Spree::Taxon,
+            [:admin, :manage], ::Spree::Classification,
+            [:admin, :manage], ::Spree::Prototype
           ]
         ),
         "Product Management",
@@ -280,10 +280,10 @@ namespace :spree_roles do
       make_grouped_permission_set(
         build_permission_group(
           [
-            [:read, :admin, :edit], Spree::Promotion,
-            [:read, :admin, :edit], Spree::PromotionCategory,
-            [:read, :admin], Spree::PromotionRule,
-            [:read, :admin], Spree::PromotionAction,
+            [:read, :admin, :edit], ::Spree::Promotion,
+            [:read, :admin, :edit], ::Spree::PromotionCategory,
+            [:read, :admin], ::Spree::PromotionRule,
+            [:read, :admin], ::Spree::PromotionAction,
           ]
         ),
         "Promotion Display",
@@ -295,10 +295,10 @@ namespace :spree_roles do
       make_grouped_permission_set(
         build_permission_group(
           [
-            [:admin, :manage], Spree::Promotion,
-            [:admin, :manage], Spree::PromotionRule,
-            [:admin, :manage], Spree::PromotionAction,
-            [:admin, :manage], Spree::PromotionCategory
+            [:admin, :manage], ::Spree::Promotion,
+            [:admin, :manage], ::Spree::PromotionRule,
+            [:admin, :manage], ::Spree::PromotionAction,
+            [:admin, :manage], ::Spree::PromotionCategory
           ]
         ),
         "Promotion management",
@@ -308,12 +308,12 @@ namespace :spree_roles do
       make_grouped_permission_set(
         build_permission_group(
           [
-            [:admin], Spree::Store,
-            [:manage, :admin], Spree::Stock,
-            [:manage, :admin], Spree::StockItem,
-            [:manage, :admin], Spree::StockLocation,
-            [:admin, :manage], Spree::StockMovement,
-            [:admin, :manage], Spree::StockTransfer,
+            [:admin], ::Spree::Store,
+            [:manage, :admin], ::Spree::Stock,
+            [:manage, :admin], ::Spree::StockItem,
+            [:manage, :admin], ::Spree::StockLocation,
+            [:admin, :manage], ::Spree::StockMovement,
+            [:admin, :manage], ::Spree::StockTransfer,
           ]
         ),
         "Stock Management",
@@ -323,10 +323,10 @@ namespace :spree_roles do
       make_grouped_permission_set(
         build_permission_group(
           [
-            [:admin], Spree::Store,
-            [:admin, :manage], Spree::StoreCreditCategory,
-            [:admin, :manage], Spree::StoreCredit,
-            [:admin, :read, :edit], Spree::User
+            [:admin], ::Spree::Store,
+            [:admin, :manage], ::Spree::StoreCreditCategory,
+            [:admin, :manage], ::Spree::StoreCredit,
+            [:admin, :read, :edit], ::Spree::User
           ]
         ),
         "Store Credit Managment",
